@@ -8,7 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate Student Fullname
     if (empty($_POST["fullname"])) {
         $errors['fullname'] = "Fullname is required.";
-    } else {
+    } 
+    else {
         $fullname = htmlspecialchars(trim($_POST["fullname"]));
         if (strlen($fullname) < 3) {
             $errors['fullname'] = "Fullname must be at least 3 characters long.";
@@ -18,7 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate Student AIUB ID
     if (empty($_POST["id"])) {
         $errors['id'] = "AIUB ID is required.";
-    } else {
+    } 
+    else {
         $id = htmlspecialchars(trim($_POST["id"]));
         if (!preg_match("/^\d{2}-\d{5}-\d$/", $id)) {
             $errors['id'] = "Invalid ID format. Correct format: xx-yyyyy-z";
@@ -28,7 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate Email
     if (empty($_POST["email"])) {
         $errors['email'] = "Email is required.";
-    } else {
+    } 
+    else {
         $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
         if (!preg_match("/^\d{2}-\d{5}-\d{1}@student\.aiub\.edu$/", $email)) {
             $errors['email'] = "Invalid email format. Correct format: xx-yyyyy-z@student.aiub.edu";
@@ -38,7 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate Book Title (dropdown)
     if (empty($_POST["booktitle"])) {
         $errors['booktitle'] = "Please select a book.";
-    } else {
+    } 
+    else {
         $booktitle = htmlspecialchars($_POST["booktitle"]);
     }
 
@@ -50,15 +54,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors['borrowdate'] = "Borrowing date is required.";
     }
     if (empty($returndate)) {
-        $errors['Returndate'] = "Return date is required.";
-    } elseif ($borrowdate > $returndate) {
-        $errors['Returndate'] = "Return date should be after the borrowing date.";
+        $errors['returndate'] = "Return date is required.";
+    } 
+    elseif ($borrowdate > $returndate) {
+        $errors['returndate'] = "Return date should be after the borrowing date.";
     }
 
     // Validate Token
     if (empty($_POST["token"])) {
         $errors['token'] = "Token is required.";
-    } else {
+    } 
+    else {
         $token = intval($_POST["token"]);
         if ($token <= 0) {
             $errors['token'] = "Token must be a positive number.";
@@ -68,7 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate Fees
     if (empty($_POST["fees"])) {
         $errors['fees'] = "Fees are required.";
-    } else {
+    } 
+    else {
         $fees = floatval($_POST["fees"]);
         if ($fees < 0) {
             $errors['fees'] = "Fees cannot be negative.";

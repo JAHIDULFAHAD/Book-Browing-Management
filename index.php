@@ -80,7 +80,7 @@ unset($_SESSION['old_data']);
                         <span class="error"><?php echo $errors['token']; ?></span>
                      <?php endif; ?>
 
-                     <label for="Returndate">Return Date</label>
+                     <label for="returndate">Return Date</label>
                      <input type="date" name="returndate" id="returndate"value="<?php echo isset($old_data['returndate']) ? $old_data['returndate'] : ''; ?>">
                      <?php if (isset($errors['returndate'])): ?>
                        <span class="error"><?php echo $errors['returndate']; ?></span>
