@@ -76,7 +76,14 @@
                      <input type="text" id="bookId" name="bookId" placeholder="Enter Book ID" required>
 
                      <label for="bookName">Book Name</label>
-                     <input type="text" id="bookName" name="bookName" placeholder="Enter Book Name" >
+                     <select name="bookName" id="bookName" required>
+                           <option value="Code from Scratch">Code from Scratch</option>
+                           <option value="The Coding Compass">The Coding Compass</option>
+                           <option value="Hello, World of Programming">Hello, World of Programming</option>
+                           <option value="Coding Made Simple">Coding Made Simple</option>
+                           <option value="Zero to Hero: Your First Steps in Programming">Zero to Hero: Your First Steps in Programming</option>
+                           <option value="Algorithmic Adventures">Algorithmic Adventures</option>
+                       </select>
 
                      <label for="authorName">Author Name</label>
                      <input type="text" id="authorName" name="authorName" placeholder="Enter Author Name" >
@@ -100,10 +107,10 @@
             </div>
             <div class="box4">
                 <div class="box5">
-                <img src="book1.jpeg" alt="book1" width="160" height="100">   
+                <img src="book1.jpeg" alt="book1" width="175" height="100">   
                 </div>  
                 <div class="box6">
-                <img src="libary.jpg" alt="libary" width="160" height="100"> 
+                <img src="libary.jpg" alt="libary" width="175" height="100"> 
                 </div>
                 <div class="box7">
                 <img src="book2.avif" alt="book2" width="155" height="100"> 
@@ -113,7 +120,14 @@
             <form  action="insertData.php" method="post">
                         <h2>Book Insertion</h2>
                         <label for=" Book name" > Book name</label>
-                        <input type="Text" placeholder="Enter book name" name="bookName" id="bookName" required>
+                        <select name="bookNamee" id="bookName" required>
+                           <option value="Code from Scratch">Code from Scratch</option>
+                           <option value="The Coding Compass">The Coding Compass</option>
+                           <option value="Hello, World of Programming">Hello, World of Programming</option>
+                           <option value="Coding Made Simple">Coding Made Simple</option>
+                           <option value="Zero to Hero: Your First Steps in Programming">Zero to Hero: Your First Steps in Programming</option>
+                           <option value="Algorithmic Adventures">Algorithmic Adventures</option>
+                       </select>
 
                         <label for=Author > Author</label>
                         <input type="Text" placeholder="Enter author name" name="authorName" id="authorName" required>
@@ -145,12 +159,12 @@
                        
                        <label for="Book Title" name="booktitle"id="booktitle">Book Title</label>
                        <select name="booktitle" id="booktitle" required>
-                           <option value="book1">Book 1</option>
-                           <option value="book2">Book 2</option>
-                           <option value="book3">Book 3</option>
-                           <option value="book3">Book 4</option>
-                           <option value="book3">Book 5</option>
-                           <option value="book3">Book 6</option>
+                           <option value="book1">Code from Scratch</option>
+                           <option value="book2">The Coding Compass</option>
+                           <option value="book3">Hello, World of Programming</option>
+                           <option value="book3">Coding Made Simple</option>
+                           <option value="book3">Zero to Hero: Your First Steps in Programming</option>
+                           <option value="book3">Algorithmic Adventures</option>
                        </select>
 
                        <label for="borrowdate" >Borrowing Date </label>
@@ -198,7 +212,14 @@
             
         </div>
         <div class="third">
-            <div class="box12"></div>
+            <div class="box12">
+                 <form action="search.php" method="get">
+                     <label for="search">Enter Book Name or ISBN:</label>
+                     <input type="text" id="search" name="search" required>
+                     <button type="submit">Check Quantity</button>
+                 </form>
+
+            </div>
         </div>
         
     </div> 

@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Borrow Receipt</title>
+    <link rel="stylesheet" href="style.css">
+    <body>
+</body>
+</head>
 <?php
 // Establish Database Connection
 $conn = mysqli_connect('localhost', 'root', '', 'book_browing');
@@ -30,12 +38,15 @@ if (!empty($query)) {
     $result = mysqli_query($conn, $query);
 
     if ($result) {
-        echo "<h1>Action ($action) executed successfully.</h1>";
+        echo "<div class='confirmation' style='display: block;'>";
+             echo "<h2>Action ($action) executed successfully.</h2>";
     } else {
-        echo "<h1>Error executing action ($action): " . mysqli_error($conn) . "</h1>";
+        echo "<div class='confirmation' style='display: block;'>";
+             echo "<h2>Error executing action ($action): " . mysqli_error($conn) . "</h2>";
     }
 } else {
-    echo "<h1>No action performed. Please provide valid input.</h1>";
+    echo "<div class='confirmation' style='display: block;'>";
+         echo "<h2>No action performed. Please provide valid input.</h2>";
 }
 
 // Redirect to Home Page

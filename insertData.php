@@ -1,5 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Borrow Receipt</title>
+    <link rel="stylesheet" href="style.css">
+    <body>
+</body>
+</head>
 <?php
-    $bookname = $_POST["bookName"] ?? "";
+    $bookname = $_POST["bookNamee"] ?? "";
     $authorName = $_POST["authorName"] ?? "";
     $isbn = $_POST["isbn"] ?? "";
     $quantity = $_POST["quantity"] ?? "";
@@ -12,11 +20,14 @@
 
     if($result)
     {
-        echo "<h1>Data inserted successfully.</h1>";
+        echo "<div class='confirmation' style='display: block;'>";
+             echo "<h2>Data inserted successfully.</h2>";
+             
     }
     else
     {
-        echo "<h1>The data was not inserted. </h1>";
+        echo "<div class='confirmation' style='display: block;'>";
+             echo "<h2>The data was not inserted.</h2>";
     }
 
     header("refresh: 2; url = index.php");

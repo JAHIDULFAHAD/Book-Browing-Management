@@ -32,15 +32,16 @@
 }
 
 .box2 {
-    width: 500px;
-    height: 400px;
+   
+    flex: 1 1 calc(50% );
+    height: 100px;
     border: 2px rgba(30, 186, 173, 0.607) solid;
     background-color: #e6f2ff;
    margin-bottom: 10px;
    margin-right: 10px;
 }
 .box3 {
-    width: 500px;
+    flex: 1 1 calc(50% );
     height: 690px;
     border: 2px rgba(30, 186, 173, 0.607) solid;
     background-color: #e6f2ff; ;
@@ -52,14 +53,15 @@
     flex-direction: row;
 }
 .box5 {
-    width: 160px;
+
+   flex: 1 1 calc(50% );
     height: 100px;
     border: 2px rgba(30, 186, 173, 0.607) solid;
    margin-bottom: 10px;
    margin-right: 10px;
 }
 .box6 {
-    width: 160px;
+    flex: 1 1 calc(50% );
     height: 100px;
     border: 2px rgba(30, 186, 173, 0.607) solid;
    margin-bottom: 10px;
@@ -73,7 +75,7 @@
    margin-right: 10px;
 }
 .box8 {
-    width: 500px;
+    flex: 1 1 calc(50% );
     height: 530px;
    border: 2px rgba(30, 186, 173, 0.607) solid;
    margin-bottom: 10px;
@@ -84,7 +86,7 @@
     flex-direction: row;
 }
 .box10 {
-    width: 300px;
+    flex: 1 1 calc(50% );
     height: 770px;
     border: 2px rgba(30, 186, 173, 0.607) solid;
    margin-bottom: 10px;
@@ -175,7 +177,7 @@ button:active {
 
 
 .box11 {
-    width: 190px;
+    flex: 1 1 calc(50% );
     height: 770px;
     border: 2px rgba(30, 186, 173, 0.607) solid;
     background-color: #e6f2ff; 

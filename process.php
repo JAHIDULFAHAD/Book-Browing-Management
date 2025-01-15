@@ -3,9 +3,9 @@
 <head>
     <title>Borrow Receipt</title>
     <link rel="stylesheet" href="style.css">
+    <body>
+</body>
 </head>
-
-<body>  
 
      <?php
          $errors = [];
