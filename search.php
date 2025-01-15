@@ -29,9 +29,11 @@ if (mysqli_num_rows($result) > 0) {
     echo "<div class='confirmation' style='display: block;'>";
           echo "<h2>Book Name: " . htmlspecialchars($row['bookName']) . "</h2>";
           echo "<h2>Quantity Available: " . htmlspecialchars($row['quantity']) . "</h2>";
+          echo "<button onclick='history.back()'>Go Back</button>";
 } else {
     echo "<div class='confirmation' style='display: block;'>";
          echo "<h2>No book found with the given identifier.</h2>";
+         echo "<button onclick='history.back()'>Go Back</button>";
 }
 
 // Close the Database Connection

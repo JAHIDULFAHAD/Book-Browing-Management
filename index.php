@@ -75,28 +75,6 @@
                      <label for="bookId">Book Id</label>
                      <input type="text" id="bookId" name="bookId" placeholder="Enter Book ID" required>
 
-                     <label for="bookName">Book Name</label>
-                     <select name="bookName" id="bookName" required>
-                           <option value="Code from Scratch">Code from Scratch</option>
-                           <option value="The Coding Compass">The Coding Compass</option>
-                           <option value="Hello, World of Programming">Hello, World of Programming</option>
-                           <option value="Coding Made Simple">Coding Made Simple</option>
-                           <option value="Zero to Hero: Your First Steps in Programming">Zero to Hero: Your First Steps in Programming</option>
-                           <option value="Algorithmic Adventures">Algorithmic Adventures</option>
-                       </select>
-
-                     <label for="authorName">Author Name</label>
-                     <input type="text" id="authorName" name="authorName" placeholder="Enter Author Name" >
-
-                     <label for="isbn">Isbn</label>
-                     <input type="text" id="isbn" name="isbn" placeholder="Enter ISBN" >
-
-                     <label for="quantity">Quantity</label>
-                     <input type="number" id="quantity" name="quantity" placeholder="Enter Quantity" >
-
-                     <label for="category">Category</label>
-                     <input type="text" id="category" name="category" placeholder="Enter Category" >
-
                      <label for="action">Action</label>
                      <select id="action" name="action" required>
                          <option value="update">Update</option>

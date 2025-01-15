@@ -3,55 +3,62 @@
 <head>
     <title>Borrow Receipt</title>
     <link rel="stylesheet" href="style.css">
-    <body>
-</body>
 </head>
-<?php
-// Establish Database Connection
-$conn = mysqli_connect('localhost', 'root', '', 'book_browing');
+<body>
+    <?php
+    // Establish Database Connection
+    $conn = mysqli_connect('localhost', 'root', '', 'book_browing');
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-// Retrieve Data from Form
-$bookname = $_POST["bookName"] ?? "";
-$authorName = $_POST["authorName"] ?? "";
-$isbn = $_POST["isbn"] ?? "";
-$quantity = $_POST["quantity"] ?? "";
-$category = $_POST["category"] ?? "";
-$action = $_POST["action"] ?? ""; // 'insert', 'update', or 'delete'
-
-// Perform Action Based on Form Submission
-if ($action === 'update') {
-    $bookId = $_POST["bookId"] ?? ""; // ID of the book to update
-    $query = "UPDATE bookrecords 
-              SET bookName='$bookname', authorName='$authorName', isbn='$isbn', quantity='$quantity', category='$category' 
-              WHERE id='$bookId'";
-} elseif ($action === 'delete') {
-    $bookId = $_POST["bookId"] ?? ""; // ID of the book to delete
-    $query = "DELETE FROM bookrecords WHERE id='$bookId'";
-}
-
-// Execute Query
-if (!empty($query)) {
-    $result = mysqli_query($conn, $query);
-
-    if ($result) {
-        echo "<div class='confirmation' style='display: block;'>";
-             echo "<h2>Action ($action) executed successfully.</h2>";
-    } else {
-        echo "<div class='confirmation' style='display: block;'>";
-             echo "<h2>Error executing action ($action): " . mysqli_error($conn) . "</h2>";
+    if (!$conn) {
+        die("<h2>Connection failed: " . mysqli_connect_error() . "</h2>");
     }
-} else {
-    echo "<div class='confirmation' style='display: block;'>";
-         echo "<h2>No action performed. Please provide valid input.</h2>";
-}
 
-// Redirect to Home Page
-header("refresh: 2; url = index.php");
+    
+    $action = $_POST["action"] ?? ""; // 'insert', 'update', or 'delete'
+    $bookId = $_POST["bookId"] ?? ""; // ID of the book for update/delete actions
 
-// Close Connection
-mysqli_close($conn);
-?>
+    $query = ""; // Initialize query variable
+
+    // Perform Action Based on Form Submission
+    if ($action === 'update') {
+        if (!empty($bookId)) {
+            header("Location: update.php?bookId=$bookId");
+            exit();
+        } else {
+            echo "<div class='confirmation' style='display: block;'>
+                     <h2>Book ID is required to update.</h2>
+                  </div>";
+        }
+    } elseif ($action === 'delete') {
+        if (!empty($bookId)) {
+            $query = "DELETE FROM bookrecords WHERE id='$bookId'";
+        } else {
+            echo "<div class='confirmation' style='display: block;'>
+                     <h2>Book ID is required to delete.</h2>
+                  </div>";
+        }
+    }
+
+    // Execute Query if Valid
+    if (!empty($query)) {
+        $result = mysqli_query($conn, $query);
+
+        if ($result) {
+            echo "<div class='confirmation' style='display: block;'>
+                     <h2>Action ($action) executed successfully.</h2>
+                  </div>";
+        } else {
+            echo "<div class='confirmation' style='display: block;'>
+                     <h2>Error executing action ($action): " . mysqli_error($conn) . "</h2>
+                  </div>";
+        }
+    }
+
+    // Redirect to Home Page after 2 seconds
+    header("refresh: 2; url = index.php");
+
+    // Close Connection
+    mysqli_close($conn);
+    ?>
+</body>
+</html>

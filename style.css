@@ -32,17 +32,16 @@
 }
 
 .box2 {
-   
-    flex: 1 1 calc(50% );
-    height: 100px;
+    
+    height: 250px;
     border: 2px rgba(30, 186, 173, 0.607) solid;
     background-color: #e6f2ff;
    margin-bottom: 10px;
    margin-right: 10px;
+   overflow-y: auto;
 }
 .box3 {
-    flex: 1 1 calc(50% );
-    height: 690px;
+    height: 300px;
     border: 2px rgba(30, 186, 173, 0.607) solid;
     background-color: #e6f2ff; ;
    margin-bottom: 10px;
@@ -75,7 +74,6 @@
    margin-right: 10px;
 }
 .box8 {
-    flex: 1 1 calc(50% );
     height: 530px;
    border: 2px rgba(30, 186, 173, 0.607) solid;
    margin-bottom: 10px;
@@ -294,5 +292,13 @@ h2 {
 
 .back-button:hover {
      background-color: #0056b3; 
+}
+
+.update {
+    justify-content: center; 
+    flex: 1 1 calc(50% - 20px);
+    height: 65%;
+    border: 2px black solid;
+    margin-bottom: 10px;
 }
 
