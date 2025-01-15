@@ -43,7 +43,7 @@
                 <table class="table">
                     
                             <tr>
-                                <td>ID</td>
+                                <td> Book ID</td>
                                 <td>Book name</td>
                                 <td>Author</td>
                                 <td>Isbn</td>
@@ -72,25 +72,25 @@
                  <form action="update_delete.php" method="POST">
                      <h2>Update or Delete Book</h2>
 
-                     <label for="bookId">Book ID:</label>
+                     <label for="bookId">Book Id</label>
                      <input type="text" id="bookId" name="bookId" placeholder="Enter Book ID" required>
 
-                     <label for="bookName">Book Name:</label>
-                     <input type="text" id="bookName" name="bookName" placeholder="Enter Book Name">
+                     <label for="bookName">Book Name</label>
+                     <input type="text" id="bookName" name="bookName" placeholder="Enter Book Name" >
 
-                     <label for="authorName">Author Name:</label>
-                     <input type="text" id="authorName" name="authorName" placeholder="Enter Author Name">
+                     <label for="authorName">Author Name</label>
+                     <input type="text" id="authorName" name="authorName" placeholder="Enter Author Name" >
 
-                     <label for="isbn">ISBN:</label>
-                     <input type="text" id="isbn" name="isbn" placeholder="Enter ISBN">
+                     <label for="isbn">Isbn</label>
+                     <input type="text" id="isbn" name="isbn" placeholder="Enter ISBN" >
 
-                     <label for="quantity">Quantity:</label>
-                     <input type="number" id="quantity" name="quantity" placeholder="Enter Quantity">
+                     <label for="quantity">Quantity</label>
+                     <input type="number" id="quantity" name="quantity" placeholder="Enter Quantity" >
 
-                     <label for="category">Category:</label>
-                     <input type="text" id="category" name="category" placeholder="Enter Category">
+                     <label for="category">Category</label>
+                     <input type="text" id="category" name="category" placeholder="Enter Category" >
 
-                     <label for="action">Action:</label>
+                     <label for="action">Action</label>
                      <select id="action" name="action" required>
                          <option value="update">Update</option>
                          <option value="delete">Delete</option>
@@ -113,19 +113,19 @@
             <form  action="insertData.php" method="post">
                         <h2>Book Insertion</h2>
                         <label for=" Book name" > Book name</label>
-                        <input type="Text" placeholder="Enter book name" name="bookName" id="bookName">
+                        <input type="Text" placeholder="Enter book name" name="bookName" id="bookName" required>
 
                         <label for=Author > Author</label>
-                        <input type="Text" placeholder="Enter author name" name="authorName" id="authorName">
+                        <input type="Text" placeholder="Enter author name" name="authorName" id="authorName" required>
 
                         <label for=Isbn > Isbn</label>
-                        <input type="Text" placeholder="Enter isbn" name="isbn" id="isbn">
+                        <input type="Text" placeholder="Enter isbn" name="isbn" id="isbn" required>
 
                         <label for=Quantity > Quantity</label>
-                        <input type="Text" placeholder="Enter quantity" name="quantity" id="quantity">
+                        <input type="Text" placeholder="Enter quantity" name="quantity" id="quantity" required>
 
                         <label for=Category > Category</label>
-                        <input type="Text" placeholder="Enter category" name="category" id="category">
+                        <input type="Text" placeholder="Enter category" name="category" id="category" required>
 
                         <button for="Submit" name="submit" id="submit">submit</button>
                     </form>
